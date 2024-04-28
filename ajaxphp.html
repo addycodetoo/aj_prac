@@ -1,0 +1,31 @@
+<html>
+    
+<head>
+    <title> PHP with AJAX & JSON </title>
+</head>
+<body>
+    <div id="header" >
+        <h1>PHP with AJAX and JSON</h1>
+
+    </div>
+    <div id="load-data"></div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+
+      
+                  $.ajax({
+                    url : "ajaxphp.php",
+                    type:"GET",
+                    dataType:"JSON",
+                    success :function(data){
+                        $.each(data,function(key,value){
+                    $("#load-data").append(value.ID + " "+ value.Name + " " + value.Age + " " + value.City+"<br>");
+                })
+                    }
+           });
+
+                
+    </script>
+</body>
+</html>
+

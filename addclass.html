@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Adding Classes Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .highlight {
+        font-weight: bold;
+        color: blue;
+    }
+</style>
+</head>
+<body>
+
+<h2>Adding Classes Example</h2>
+
+<ul id="courseList">
+    <li>MCA</li>
+    <li>MBA</li>
+    <li>MSW</li>
+</ul>
+
+<script>
+$(document).ready(function() {
+    // Add class 'highlight' to each list item
+    $("#courseList li").addClass("highlight");
+});
+</script>
+
+</body>
+</html>

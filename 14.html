@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Adding Classes Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .highlight {
+        font-weight: bold;
+        color: blue;
+    }
+</style>
+</head>
+<body>
+
+<h2>Adding Classes Example</h2>
+
+<ul id="courseList">
+    <li>MCA</li>
+    <li>MBA</li>
+    <li>MSW</li>
+    <li>B.Tech</li>
+    <li>BCA</li>
+</ul>
+
+<script>
+$(document).ready(function() {
+    // Select only "B.Tech" and "BCA" items and add class 'highlight'
+    $("#courseList li").filter(function() {
+        return $(this).text() === "B.Tech" || $(this).text() === "BCA";
+    }).addClass("highlight");
+});
+</script>
+
+</body>
+</html>
